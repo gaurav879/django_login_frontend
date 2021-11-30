@@ -20,7 +20,7 @@ async function l_handleSubmit() {
     data = {
         jwt : window.localStorage.getItem('jwt')
     }
-    const res = await fetch("http://localhost:8000/api/user",{
+    const res = await fetch("https://laptop9.pythonanywhere.com/api/user",{
       method : "POST",
       body: JSON.stringify(data)
     })
@@ -44,7 +44,7 @@ async function u_handleSubmit(){
     data = {
         jwt : window.localStorage.getItem('jwt')
     }
-    const res = await fetch("http://localhost:8000/api/user",{
+    const res = await fetch("https://laptop9.pythonanywhere.com/api/user",{
       method : "POST",
       body: JSON.stringify(data)
     })
@@ -73,7 +73,7 @@ async function s_handleSubmit() {
         email : u_email.value,
         address : u_address.value
     }
-    const resp = await fetch("http://localhost:8000/api/user",{
+    const resp = await fetch("https://laptop9.pythonanywhere.com/api/user",{
         method : "PUT",
         body: JSON.stringify(data)
     }) 
@@ -83,7 +83,7 @@ async function s_handleSubmit() {
 async function handleSubmit() {
     document.cookie = 'jwt='
     localStorage.setItem("jwt","")
-    const res = await fetch("http://localhost:8000/api/logout",{
+    const res = await fetch("https://laptop9.pythonanywhere.com/api/logout",{
       method : "GET"
     })
     .then(function(res)
@@ -99,7 +99,7 @@ async function d_handleSubmit() {
     data = {
         jwt : window.localStorage.getItem('jwt')
     }
-    const res = await fetch("http://localhost:8000/api/user",{
+    const res = await fetch("https://laptop9.pythonanywhere.com/api/user",{
       method : "DELETE",
       body : JSON.stringify(data)
     })

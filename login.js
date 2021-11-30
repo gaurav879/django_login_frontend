@@ -14,7 +14,7 @@ async function l_handleSubmit(e) {
   };
   console.log(data);
   console.log(JSON.stringify(data));
-  const res = await fetch("http://localhost:8000/api/login", {
+  const res = await fetch("https://laptop9.pythonanywhere.com/api/login", {
     method: "POST",
     body: JSON.stringify(data),
   }).then(function (res) {

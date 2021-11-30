@@ -10,11 +10,14 @@ let submitBtn = document.querySelector("#submit");
 
 submitBtn.addEventListener("click", handleSubmit);
 
-
 async function handleSubmit(e) {
     
   e.preventDefault();
-
+  if(password != confirmPassword){
+    
+    alert("Passwords do not match !!!")
+    return
+  }
   data = {
     username : userId.value,
     name : _name.value,
@@ -25,7 +28,7 @@ async function handleSubmit(e) {
 
   console.log(data)  
   console.log(JSON.stringify(data))
-  const res = await fetch("http://localhost:8000/api/register",{
+  const res = await fetch("https://laptop9.pythonanywhere.com/api/register",{
     method : "POST",
     body : JSON.stringify(data)
   })
@@ -34,5 +37,4 @@ async function handleSubmit(e) {
     return(res.json())})
   console.log(res);
 }
-
 
