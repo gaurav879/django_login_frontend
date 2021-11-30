@@ -13,8 +13,7 @@ submitBtn.addEventListener("click", handleSubmit);
 async function handleSubmit(e) {
     
   e.preventDefault();
-  if(password != confirmPassword){
-    
+  if(password.value !== confirmPassword.value){    
     alert("Passwords do not match !!!")
     return
   }
