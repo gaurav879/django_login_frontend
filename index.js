@@ -11,29 +11,26 @@ let submitBtn = document.querySelector("#submit");
 submitBtn.addEventListener("click", handleSubmit);
 
 async function handleSubmit(e) {
-    
-  e.preventDefault();
-  if(password.value !== confirmPassword.value){    
-    alert("Passwords do not match !!!")
-    return
-  }
-  data = {
-    username : userId.value,
-    name : _name.value,
-    email : email.value,
-    password : password.value,
-    address : address.value
-  }
 
-  console.log(data)  
-  console.log(JSON.stringify(data))
-  const res = await fetch("https://laptop9.pythonanywhere.com/api/register",{
-    method : "POST",
-    body : JSON.stringify(data)
-  })
-  .then(function(res){
-    alert("User Created Kindly Login")
-    return(res.json())})
-  console.log(res);
+    e.preventDefault();
+    if (password.value !== confirmPassword.value) {
+        alert("Passwords do not match !!!")
+        return
+    }
+    data = {
+        username: userId.value,
+        name: _name.value,
+        email: email.value,
+        password: password.value,
+        address: address.value
+    }
+
+    const res = await fetch("https://laptop9.pythonanywhere.com/api/register", {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+        .then(function(res) {
+            alert("User Created Kindly Login")
+            return (res.json())
+        })
 }
-
