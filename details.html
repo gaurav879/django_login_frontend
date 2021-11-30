@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <table>
+<body style="text-align: center;margin-top: 20vh; border: 2px solid black;background: linear-gradient(to right,pink,purple);" >
+    <table style="margin: 0 auto;">
          <tr>
             <th>Detail</th>
             <th>Value</th>
@@ -30,9 +30,27 @@
          </tr>
 
     </table>
-    <button>Edit Details</button>
+    <br>
+    <button id= "edit" >Edit Details</button><br><br>
+    
+    <div id="container" style="display: none;z-index: 2;border: 2px solid black;padding: 10px;">
+        <span>Name</span>
+        <input id="u_name"><br><br>
+        <span>Username</span>
+        <input id="u_username"><br><br>
+        <span>Email</span>
+        <input id="u_email"><br><br>
+        <span>Address</span>
+        <input id="u_address"><br><br>
+        <button id= "save" >Save Updates</button><br><br>
+    </div>
+    <br><br>
     <button id = "delete">Delete user</button><br><br>
     <button  id="logout" >Logout user</button><br><br>
+
+    <div>
+        
+    </div>
     <script src = "./details.js"></script>
 </body>
 </html>

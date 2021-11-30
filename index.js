@@ -29,7 +29,9 @@ async function handleSubmit(e) {
     method : "POST",
     body : JSON.stringify(data)
   })
-  .then(function(res){return(res.json())})
+  .then(function(res){
+    alert("User Created Kindly Login")
+    return(res.json())})
   console.log(res);
 }
 
